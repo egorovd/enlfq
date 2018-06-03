@@ -12,7 +12,11 @@ Build
 Using
 -----
 
+<<<<<<< HEAD
 ```erlang
+=======
+    ```erlang
+>>>>>>> b9e3c0860a515ca86a1635a5721a6cb165f8007a
 
     {ok, Q} = enlfq:new().
 
