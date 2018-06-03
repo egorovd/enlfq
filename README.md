@@ -12,7 +12,7 @@ Build
 Using
 -----
 
-    ```erlang
+```erlang
 
     {ok, Q} = enlfq:new().
 
@@ -24,7 +24,7 @@ Using
 
     empty = enlfq:pop(Q).
 
-    ```
+```
 
 
 
