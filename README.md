@@ -1,14 +1,13 @@
 enlfq
 =====
 
-A simple NIF Queue using the library: [moodycamel::concurrentqueue](https://github.com/cameron314/concurrentqueue/tree/8f7e861dd9411a0bf77a6b9de83a47b3424fafba)
+A simple NIF lock-free Queue using the library: [moodycamel::concurrentqueue](https://github.com/cameron314/concurrentqueue/tree/8f7e861dd9411a0bf77a6b9de83a47b3424fafba)
 
 #### moodycamel::ConcurrentQueue
 
 An industrial-strength lock-free queue for C++.
 
-Note: If all you need is a single-producer, single-consumer queue, I have one of those too.
-Features
+**Features**:
 
 * Knock-your-socks-off blazing fast performance.
 * Single-header implementation. Just drop it in your project.
@@ -44,7 +43,3 @@ Using
 
     empty = enlfq:pop(Q).
 ```
-
-
-
-
