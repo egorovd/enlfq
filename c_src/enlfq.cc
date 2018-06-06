@@ -1,4 +1,3 @@
-//#include <string.h>
 #include "enlfq.h"
 #include "enlfq_nif.h"
 
@@ -20,8 +19,13 @@ struct squeue {
 void nif_enlfq_free(ErlNifEnv *, void *obj) {
     squeue *inst = static_cast<squeue *>(obj);
 
-    if (inst != nullptr)
+    if (inst != nullptr) {
+        q_item item;
+        while (inst->queue->try_dequeue(item)) {
+            enif_free_env(item.env);
+        }
         delete inst->queue;
+    }
 }
 
 ERL_NIF_TERM nif_enlfq_new(ErlNifEnv *env, int, const ERL_NIF_TERM *) {
